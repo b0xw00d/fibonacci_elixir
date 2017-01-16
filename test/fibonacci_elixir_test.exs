@@ -23,7 +23,9 @@ defmodule FibonacciElixirTest do
   ]
 
   test "finds first 8 fibs" do
-    Enum.each @fib_reference, fn({spot, fib}) -> assert FibonacciElixir.fibonacci(spot) == fib end
+    Enum.each(@fib_reference, fn({index, fib}) ->
+      assert FibonacciElixir.fibonacci(index) == fib
+    end)
   end
 
 end
